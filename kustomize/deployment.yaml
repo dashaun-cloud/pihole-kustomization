@@ -24,11 +24,9 @@ spec:
 #        prometheus.io/port: '9617'
     spec:
       volumes:
-#      {{- if .Values.storage.enabled }}
-#      - name: {{ .Chart.Name }}-{{ .Chart.AppVersion }}-data-etc-pihole
-#        persistentVolumeClaim:
-#          claimName: {{ .Chart.Name }}-{{ .Chart.AppVersion }}-pihole-root-pvclaim
-#      {{- end }}
+      - name: data-etc-pihole
+        persistentVolumeClaim:
+          claimName: pihole-root-pvclaim
 
       - name: config-volume
         configMap:
