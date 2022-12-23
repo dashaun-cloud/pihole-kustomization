@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: pihole-config
 data:
-  pihole-FTL.conf: |
-    ANALYZE_ONLY_A_AND_AAAA=false
-    DBFILE=/etc/pihole/pihole-FTL.db
+#  pihole-FTL.conf: |
+#    ANALYZE_ONLY_A_AND_AAAA=false
+#    DBFILE=/etc/pihole/pihole-FTL.db
 
 #  custom-dns.conf: |
 #    {{- range $name, $ip := .Values.dns.custom }}
