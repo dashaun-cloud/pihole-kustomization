@@ -19,9 +19,9 @@ spec:
       labels:
         app: pihole
         name: pihole
-      annotations:
-        prometheus.io/scrape: 'true'
-        prometheus.io/port: '9617'
+#      annotations:
+#        prometheus.io/scrape: 'true'
+#        prometheus.io/port: '9617'
     spec:
       volumes:
 #      {{- if .Values.storage.enabled }}
