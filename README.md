@@ -16,3 +16,5 @@ flux create kustomization pihole \
   --prune=true \
   --export > ./clusters/arkansas/pihole-kustomization.yaml
 ```
+
+### [Sourced from pihole-ha](https://github.com/abarruda/pihole-ha)

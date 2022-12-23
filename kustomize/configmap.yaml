@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pihole-config
+data:
+  pihole-FTL.conf: |
+    ANALYZE_ONLY_A_AND_AAAA=false
+    DBFILE=/etc/pihole/pihole-FTL.db
+
+#  custom-dns.conf: |
+#    {{- range $name, $ip := .Values.dns.custom }}
+#    address=/{{ $name }}/{{ $ip }}
+#    address=/{{ $name }}.{{ $.Values.dns.domain }}/{{ $ip }}
+#    {{- end }}
+
+#  {{- if .Values.config.adlists }}
+#  adlists.list: |
+#    {{- range .Values.config.adlists }}
+#    {{ . }}
+#    {{- end }}
+#  {{- end }}
+
+#  {{- if .Values.config.blacklist }}
+#  black.list: |
+#    {{- range .Values.config.blacklist }}
+#    {{ . }}
+#    {{- end }}
+
+#  blacklist.txt: |
+#    {{- range .Values.config.blacklist }}
+#    {{ . }}
+#    {{- end }}
+#  {{- end }}
+
+#  {{- if .Values.config.blacklistRegex }}
+#  regex.list: |
+#    {{- range .Values.config.blacklistRegex }}
+#    {{ . }}
+#    {{- end }}
+#  {{- end }}
+
+#  {{- if .Values.config.whitelist }}
+#  whitelist.txt: |
+#    {{- range .Values.config.whitelist }}
+#    {{ . }}
+#    {{- end }}
+#  {{- end}}
