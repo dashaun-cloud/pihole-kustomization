@@ -32,10 +32,10 @@ spec:
         configMap:
           name: pihole-config
 
-#      dnsPolicy: "None"
-#      dnsConfig:
-#        nameservers:
-#          - 127.0.0.1
+      dnsPolicy: "None"
+      dnsConfig:
+        nameservers:
+          - 127.0.0.1
 
         # options:
         #   - name: rotate
@@ -104,9 +104,9 @@ spec:
             - name: config-volume
               mountPath: /etc/pihole/pihole-FTL.conf
               subPath: pihole-FTL.conf
-#            - name: config-volume
-#              mountPath: /etc/dnsmasq.d/custom-dns.conf
-#              subPath: custom-dns.conf
+            - name: config-volume
+              mountPath: /etc/dnsmasq.d/custom-dns.conf
+              subPath: custom-dns.conf
 #            {{- if .Values.config.adlists }}
 #            - name: config-volume
 #              mountPath: /etc/pihole/adlists.list
