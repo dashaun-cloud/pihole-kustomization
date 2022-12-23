@@ -10,4 +10,4 @@ resources:
   - pvc-pihole-root.yaml
 #  - secret-ui.yaml
   - service-tcp.yaml
-#  - service-udp.yaml
+  - service-udp.yaml
