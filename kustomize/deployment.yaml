@@ -99,10 +99,8 @@ spec:
               protocol: TCP
 
           volumeMounts:
-#            {{- if .Values.storage.enabled }}
-#            - name: {{ .Chart.Name }}-{{ .Chart.AppVersion }}-data-etc-pihole
-#              mountPath: /etc/pihole
-#            {{- end }}
+            - name: data-etc-pihole
+              mountPath: /etc/pihole
             - name: config-volume
               mountPath: /etc/pihole/pihole-FTL.conf
               subPath: pihole-FTL.conf
@@ -184,18 +182,3 @@ spec:
             periodSeconds: 30
             successThreshold: 1
             failureThreshold: 20
-
-#      {{- if .Values.affinity.value }}
-#      affinity:
-#        nodeAffinity:
-#          preferredDuringSchedulingIgnoredDuringExecution:
-#            - weight: {{ .Values.affinity.weight }}
-#              preference:
-#                matchExpressions:
-#                  - key: "{{ .Values.affinity.label }}"
-#                    operator: In
-#                    values:
-#                      {{- range .Values.affinity.value }}
-#                      - {{ . | quote }}
-#                      {{- end }}
-#      {{- end }}
