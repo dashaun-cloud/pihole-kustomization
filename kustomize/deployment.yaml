@@ -45,35 +45,35 @@ spec:
         #     value: "1"
 
       containers:
-        - name: exporter
-          image: ekofr/pihole-exporter:latest
-          imagePullPolicy: IfNotPresent
-          env:
-            - name: PIHOLE_HOSTNAME
-              value: localhost
-
-            - name: PIHOLE_PASSWORD
-              value: VMware1!
-
-            - name: INTERVAL
-              value: 30s
-
-            - name: PORT
-              value: '9617'
-
-          ports:
-            - containerPort: 9617
-              name: exporterport
-              protocol: TCP
-
-          livenessProbe:
-            httpGet:
-              path: /liveness
-              port: 9617
-          readinessProbe:
-            httpGet:
-              path: /readiness
-              port: 9617
+#        - name: exporter
+#          image: ekofr/pihole-exporter:latest
+#          imagePullPolicy: IfNotPresent
+#          env:
+#            - name: PIHOLE_HOSTNAME
+#              value: localhost
+#
+#            - name: PIHOLE_PASSWORD
+#              value: VMware1!
+#
+#            - name: INTERVAL
+#              value: 30s
+#
+#            - name: PORT
+#              value: '9617'
+#
+#          ports:
+#            - containerPort: 9617
+#              name: exporterport
+#              protocol: TCP
+#
+#          livenessProbe:
+#            httpGet:
+#              path: /liveness
+#              port: 9617
+#          readinessProbe:
+#            httpGet:
+#              path: /readiness
+#              port: 9617
 
         - name: pihole
           image: pihole/pihole:2022.12
