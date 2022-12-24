@@ -9,5 +9,5 @@ resources:
   - namespace.yaml
   - pvc-pihole-root.yaml
 #  - secret-ui.yaml
-#  - service-tcp.yaml
+  - service-tcp.yaml
   - service-udp.yaml
