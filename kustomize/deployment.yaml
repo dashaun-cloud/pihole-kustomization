@@ -140,7 +140,8 @@ spec:
               value: 10.14.1.9
             - name: TZ
               value: "America/Chicago"
-#            - name: WEBPASSWORD
+            - name: WEBPASSWORD
+              value: pihole
 #              valueFrom:
 #                secretKeyRef:
 #                  name: pihole-ui-secret
