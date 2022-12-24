@@ -32,10 +32,10 @@ spec:
         configMap:
           name: pihole-config
 
-      dnsPolicy: "None"
-      dnsConfig:
-        nameservers:
-          - 1.1.1.1
+      dnsPolicy: "Default"
+#      dnsConfig:
+#        nameservers:
+#          - 1.1.1.1
 
         # options:
         #   - name: rotate
