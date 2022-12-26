@@ -12,7 +12,7 @@ spec:
   selector:
     app: pihole
 
-  type: ClusterIP
+  type: LoadBalancer
   externalTrafficPolicy: Local
 #  loadBalancerIP: {{ .Values.service.ip }}
 
