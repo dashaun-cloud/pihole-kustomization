@@ -137,7 +137,7 @@ spec:
             - name: DNS2
               value: 10.14.1.1
             - name: ServerIP
-              value: 10.14.1.9
+              value: 10.14.1.4
             - name: TZ
               value: "America/Chicago"
             - name: WEBPASSWORD
