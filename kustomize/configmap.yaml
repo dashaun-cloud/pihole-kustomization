@@ -7,7 +7,8 @@ data:
     ANALYZE_ONLY_A_AND_AAAA=false
     DBFILE=/etc/pihole/pihole-FTL.db
 
-#  custom-dns.conf: |
+  custom-dns.conf: |
+     server=/local/10.14.1.1
 #    {{- range $name, $ip := .Values.dns.custom }}
 #    address=/{{ $name }}/{{ $ip }}
 #    address=/{{ $name }}.{{ $.Values.dns.domain }}/{{ $ip }}
