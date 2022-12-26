@@ -9,8 +9,7 @@ data:
 
   custom-dns.conf: |
     server=/local/10.14.1.1
-    bind-interfaces
-    RESOLVE_IPV6=no
+    except-interface=nonexisting
 #    {{- range $name, $ip := .Values.dns.custom }}
 #    address=/{{ $name }}/{{ $ip }}
 #    address=/{{ $name }}.{{ $.Values.dns.domain }}/{{ $ip }}
