@@ -97,8 +97,6 @@ spec:
 #            {{- end }}
 
           env:
-            - name: IPV4_ADDRESS
-              value: 10.14.1.4/24
             - name: DNS1
               value: 10.14.1.1
             - name: DNS2
